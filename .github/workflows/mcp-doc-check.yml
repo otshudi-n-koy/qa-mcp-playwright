@@ -1,0 +1,35 @@
+name: MCP Configuration Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Validate agent files exist
+        run: |
+          echo "🔍 Checking agent files..."
+          test -f .github/agents/qa-mcp-agent.md && echo "✅ qa-mcp-agent.md found" || exit 1
+          test -f .github/prompts/explore-and-report.prompt.md && echo "✅ explore-and-report.prompt.md found" || exit 1
+
+      - name: Validate mcp.json template exists
+        run: |
+          echo "🔍 Checking MCP documentation..."
+          grep -q "playwright" README.md && echo "✅ Playwright MCP documented" || exit 1
+          grep -q "jira" README.md && echo "✅ Jira MCP documented" || exit 1
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "✅ All checks passed"
+          echo "📋 Agents: $(find .github/agents -name '*.md' | wc -l)"
+          echo "📋 Prompts: $(find .github/prompts -name '*.md' | wc -l)"
