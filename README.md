@@ -25,12 +25,17 @@ a real browser, validates features, and creates Jira tickets autonomously.
 
 ## How it works
 
+```
 Copilot Agent (VS Code)
-│
-├── MCP Playwright ──► browser_navigate, browser_click,
-│                       browser_fill, browser_screenshot
-│
-└── MCP Jira ────────► jira_create_issue, jira_get_issue
+        │
+        ├── MCP Playwright ──► browser_navigate
+        │                      browser_click
+        │                      browser_fill
+        │                      browser_screenshot
+        │
+        └── MCP Jira ────────► jira_create_issue
+                               jira_get_issue
+```
 
 **In practice:**
 1. You describe what to test in Copilot Chat
