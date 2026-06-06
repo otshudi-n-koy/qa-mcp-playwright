@@ -47,19 +47,19 @@ Copilot Agent (VS Code)
 
 ## Project structure
 
+```
 qa-mcp-playwright/
 ├── .github/
 │   ├── agents/
-│   │   └── qa-mcp-agent.md              # MCP-powered QA agent
-│   ├── instructions/                     # (coming soon)
+│   │   └── qa-mcp-agent.md               # MCP-powered QA agent
+│   ├── instructions/                      # (coming soon)
 │   └── prompts/
-│       └── explore-and-report.prompt.md # Explore + Jira report workflow
-├── examples/                             # Session outputs and screenshots
+│       └── explore-and-report.prompt.md  # Explore + Jira report workflow
+├── examples/                              # Session outputs and screenshots
 ├── .vscode/
-│   └── mcp.json                         # MCP servers config (not committed)
-└── .env.local                           # Credentials (not committed)
-
----
+│   └── mcp.json                          # MCP servers config (not committed)
+└── .env.local                            # Credentials (not committed)
+```
 
 ## Getting started
 
