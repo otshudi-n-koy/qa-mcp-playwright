@@ -19,20 +19,25 @@ All steps completed successfully. No defect detected. No Jira ticket created.
 [MCP:playwright] browser_navigate → https://demo.playwright.dev/todomvc
 [MCP:playwright] browser_screenshot → screenshot-01-initial.png
 [AGENT] Page loaded. Input field detected: ".new-todo"
+
 [AGENT] Step 1 — Fill the task input
 [MCP:playwright] browser_fill → selector=".new-todo", value="Buy groceries"
 [MCP:playwright] browser_screenshot → screenshot-02-filled.png
+
 [AGENT] Step 2 — Submit the task (Enter key)
 [MCP:playwright] browser_key_press → key="Enter"
 [MCP:playwright] browser_screenshot → screenshot-03-submitted.png
+
 [AGENT] Step 3 — Verify task appears in the list
 [MCP:playwright] browser_evaluate → document.querySelectorAll(".todo-list li").length
 → result: 1
 [MCP:playwright] browser_evaluate → document.querySelector(".todo-list li label").textContent
 → result: "Buy groceries"
+
 [AGENT] Assertion: task label matches input value → ✅ OK
 [AGENT] Assertion: task count = 1 → ✅ OK
 [AGENT] Assertion: task not marked as completed → ✅ OK
+
 [AGENT] All assertions passed. Feature "Create a task" is FUNCTIONAL.
 [AGENT] No defect detected → Jira ticket creation skipped.
 
