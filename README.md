@@ -1,5 +1,11 @@
 # qa-mcp-playwright
 
+[![MCP Configuration Check](https://github.com/otshudi-n-koy/qa-mcp-playwright/actions/workflows/mcp-doc-check.yml/badge.svg)](https://github.com/otshudi-n-koy/qa-mcp-playwright/actions/workflows/mcp-doc-check.yml)
+[![Node.js 18+](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![MCP Playwright](https://img.shields.io/badge/MCP-Playwright-blue)](https://github.com/microsoft/playwright-mcp)
+[![MCP Jira](https://img.shields.io/badge/MCP-Jira-0052CC)](https://www.npmjs.com/package/jira-mcp)
+
 > QA Automation toolkit demonstrating MCP (Model Context Protocol) integration —
 > browser control with Playwright and Jira reporting, orchestrated by an AI agent.
 
