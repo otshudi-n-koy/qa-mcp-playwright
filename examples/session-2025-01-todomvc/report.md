@@ -15,6 +15,9 @@ All steps completed successfully. No defect detected. No Jira ticket created.
 
 ## Agent trace
 
+## Agent trace
+
+```
 [AGENT] Starting exploration of https://demo.playwright.dev/todomvc
 [MCP:playwright] browser_navigate → https://demo.playwright.dev/todomvc
 [MCP:playwright] browser_screenshot → screenshot-01-initial.png
@@ -34,14 +37,13 @@ All steps completed successfully. No defect detected. No Jira ticket created.
 [MCP:playwright] browser_evaluate → document.querySelector(".todo-list li label").textContent
 → result: "Buy groceries"
 
-[AGENT] Assertion: task label matches input value → ✅ OK
-[AGENT] Assertion: task count = 1 → ✅ OK
-[AGENT] Assertion: task not marked as completed → ✅ OK
+[AGENT] Assertion: task label matches input value → OK
+[AGENT] Assertion: task count = 1 → OK
+[AGENT] Assertion: task not marked as completed → OK
 
 [AGENT] All assertions passed. Feature "Create a task" is FUNCTIONAL.
 [AGENT] No defect detected → Jira ticket creation skipped.
-
----
+```
 
 ## Screenshots
 
